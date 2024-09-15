@@ -1,0 +1,13 @@
+.hall-bg{
+    z-index: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/castle/hall.jpg'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }

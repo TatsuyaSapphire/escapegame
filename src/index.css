@@ -1,0 +1,190 @@
+:root {
+  --background-light: #ffffff;
+  --background-dark: #1e293b;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+}
+
+html,
+body {
+	height: 100%
+}
+.love-bg{
+  background-image: url('./assets/anime-love-pictures-vuv6ecl76miwamz3.jpg'); /* Image de fond */
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.city-bg{
+  z-index: 1;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/city-transparent.png'); /* Image de fond */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sky{
+  z-index: 0;
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  background-image: url('./assets/halloween-moon-2014-high-quality-full-moon-with-jack-o-lanterns-hd-wallpaper-wallpaper-preview.jpg');
+}
+
+/* FOOOTER */
+
+.dashboard {
+  position: fixed; /* Fixe le dashboard en bas de la page */
+  bottom: 50px; /* Positionne à 20px du bas */
+  right: 50px;
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 50px; /* Espace entre les icônes */
+  padding: 10px;
+}
+
+.icon-dashboard{
+  width: 30px;  /* Ajuste la taille des icônes SVG */
+  height: 30px;
+  fill: orange;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-dashboard:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  transform: scale(1.1); /* Agrandit légèrement l'icône pour plus d'effet */
+  animation: glow 1s infinite alternate; /* Animation pour un effet de pulsation */
+}
+
+.label {
+  font-size: 16px; /* Ajuste la taille du texte */
+  color: white; /* Couleur du texte */
+}
+
+/* ARROW */
+.arrowl-city{
+  width: 100px;
+  position: absolute;
+  bottom: 20%;
+  left: 30%;
+  transition: all 0.3s ease-in-out;
+  animation: floatl 3s ease-in-out infinite;
+}
+
+.arrowm-city{
+  width: 100px;
+  position: absolute;
+  bottom: 20%;
+  left: 45%;
+  transition: all 0.3s ease-in-out;
+  animation: floatm 3s ease-in-out infinite;
+}
+
+.arrowr-city{
+  width: 100px;
+  position: absolute;
+  bottom: 20%;
+  right: 35%;
+  transition: all 0.3s ease-in-out;
+  animation: floatr 3s ease-in-out infinite;
+}
+
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-arrow .icon-dashboard {
+  width: 30px;
+  height: 30px;
+  fill: orange; /* Couleur de la flèche */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.back-arrow .icon-dashboard:hover {
+  transform: scale(1.2); /* Agrandit légèrement l'icône au survol */
+}
+
+
+
+.arrowl-city:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  transform: scale(1.1) rotate(220deg);
+  animation: glow 1s infinite alternate; /* Animation pour un effet de pulsation */
+}
+
+.arrowm-city:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  transform: scale(1.1) rotate(270deg);
+  animation: glow 1s infinite alternate;
+}
+
+.arrowr-city:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  transform: scale(1.1) rotate(300deg);
+  animation: glow 1s infinite alternate;
+}
+
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 1)) drop-shadow(0 0 30px rgba(255, 165, 0, 1));
+  }
+}
+
+@keyframes floatl {
+  0% {
+    transform: translateY(0) rotate(220deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(220deg); /* L'icône monte légèrement */
+  }
+  100% {
+    transform: translateY(0) rotate(220deg); /* Retour à la position initiale */
+  }
+}
+
+@keyframes floatm {
+  0% {
+    transform: translateY(0) rotate(270deg);
+}
+  50% {
+    transform: translateY(-10px) rotate(270deg);
+}
+  100% {
+    transform: translateY(0) rotate(270deg);
+
+}
+}
+
+@keyframes floatr {
+  0% {
+    transform: translateY(0) rotate(300deg);
+}
+  50% {
+    transform: translateY(-10px) rotate(300deg);
+}
+  100% {
+    transform: translateY(0) rotate(300deg);
+
+}
+}
